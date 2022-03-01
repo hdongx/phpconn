@@ -4,15 +4,17 @@ $conexion = pg_connect("host=172.17.0.11 port=5432 dbname=sampledb user=sample p
 
 if($conexion) {
 	
-	print_r("Conexión a la base de datos\n\n");
+	print_r("Conexión a la base de datos");
+	echo "<br />\n";
+	echo "<br />\n";
 	
 	$result = pg_query($conexion, "SELECT * FROM accounts WHERE user_id > 0");
 	//var_dump(pg_fetch_all($result));
 		
 	while ($row = pg_fetch_row($result)) {
-		echo "User_ID: $row[0] \t";
-		echo "Name: $row[1] \t";
-		echo "Mail: $row[3] \t";
+		echo "<b>User_ID:</b> $row[0] \t";
+		echo "<b>Name:</b> $row[1] \t";
+		echo "<b>Mail:</b> $row[3] \t";
 		echo "<br />\n";
 	}
 	
