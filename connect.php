@@ -4,7 +4,7 @@ $conexion = pg_connect("host=172.17.0.11 port=5432 dbname=sampledb user=sample p
 
 if($conexion) {
 	
-	print_r("Conexión a la base de datos");
+	print_r("Conexión a la base de datos\n\n");
 	
 	$result = pg_query($conexion, "SELECT * FROM accounts WHERE user_id = 1");
 	//var_dump(pg_fetch_all($result));
