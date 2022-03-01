@@ -1,6 +1,6 @@
 <?php
 
-$conexion = pg_connect("host=172.30.225.222 port=5432 dbname=phpsampledb user=sample password=sample");
+$conexion = pg_connect("host=172.17.0.11 port=5432 dbname=sampledb user=sample password=sample");
 
 if($conexion) {
 	$result = pg_query($conexion, "SELECT * FROM accounts WHERE user_id = 1");
