@@ -6,7 +6,7 @@ if($conexion) {
 	
 	print_r("Conexión a la base de datos\n\n");
 	
-	$result = pg_query($conexion, "SELECT * FROM accounts WHERE user_id = 1");
+	$result = pg_query($conexion, "SELECT * FROM accounts WHERE user_id > 0");
 	//var_dump(pg_fetch_all($result));
 		
 	while ($row = pg_fetch_row($result)) {
